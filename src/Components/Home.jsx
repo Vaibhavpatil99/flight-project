@@ -8,65 +8,147 @@ const Home = () => {
   console.log(FromList)
   var data = [
     {
-      "airline": "novo",
-      "message": null,
-      "booking_info": null,
+
       "flight": [
         {
           "segments": [
             {
-              "name": "VQ-901",
+              "name": "Spice Jet",
               "plane": "ATR725",
-              "departureDate": "2020-04-26T07:00",
+              "price": "5000",
+              "departureDate": "2022-04-26",
+              "time": "07:00",
+              "origin": "MUMBAI",
+              "arrivalDate": "2022-04-26",
+              "destination": "DELHI",
+              "duration": "04h 30m"
+            },
+            {
+              "name": "Spice Jet",
+              "plane": "ATR726",
+              "price": "4500",
+              "departureDate": "2022-04-26",
+              "time": "07:00",
               "origin": "MUMBAI",
               "arrivalDate": "2022-04-26T07:55",
               "destination": "DELHI",
-              "stops": 0
+              "duration": "04h 30m"
             },
             {
-              "name": "VQ-902",
-              "plane": "ATR725",
-              "departureDate": "2022-05-26T07:00",
+              "name": "IndiGo",
+              "plane": "IND726",
+              "price": "4700",
+              "departureDate": "2022-04-26",
+              "time": "07:00",
               "origin": "MUMBAI",
-              "arrivalDate": "2020-04-26T07:55",
+              "arrivalDate": "2022-04-26T07:55",
               "destination": "DELHI",
-              "stops": 0
+              "duration": "04h 30m"
             },
             {
-              "name": "VQ-902",
+              "name": "Go First",
+              "plane": "IND726",
+              "price": "4250",
+              "departureDate": "2022-04-26",
+              "time": "07:00",
+              "origin": "MUMBAI",
+              "arrivalDate": "2022-04-26T07:55",
+              "destination": "DELHI",
+              "duration": "04h 30m"
+            },
+            {
+              "name": "Spice Jet",
               "plane": "ATR725",
-              "departureDate": "2020-04-29T08:25",
-              "origin": "CGP",
-              "arrivalDate": "2020-04-29T09:20",
-              "destination": "DAC",
-              "stops": 0
+              "price": "5000",
+              "departureDate": "2022-04-26",
+              "time": "07:00",
+              "origin": "DELHI",
+              "arrivalDate": "2022-04-26",
+              "destination": "MUMBAI",
+              "duration": "04h 30m"
+            },
+            {
+              "name": "Spice Jet",
+              "plane": "ATR726",
+              "price": "4500",
+              "departureDate": "2022-04-26",
+              "time": "07:00",
+              "origin": "DELHI",
+              "arrivalDate": "2022-04-26T07:55",
+              "destination": "MUMBAI",
+              "duration": "04h 30m"
+            },
+            {
+              "name": "IndiGo",
+              "plane": "IND726",
+              "price": "4700",
+              "departureDate": "2022-04-26",
+              "time": "07:00",
+              "origin": "DELHI",
+              "arrivalDate": "2022-04-26T07:55",
+              "destination": "MUMBAI",
+              "duration": "04h 30m"
+            },
+            {
+              "name": "Go First",
+              "plane": "IND726",
+              "price": "4250",
+              "departureDate": "2022-04-26",
+              "time": "07:00",
+              "origin": "DELHI",
+              "arrivalDate": "2022-04-26T07:55",
+              "destination": "MUMBAI",
+              "duration": "04h 30m"
+            },
+            {
+              "name": "Spice Jet",
+              "plane": "ATR725",
+              "price": "5000",
+              "departureDate": "2022-04-26",
+              "time": "07:00",
+              "origin": "MUMBAI",
+              "arrivalDate": "2022-04-26",
+              "destination": "PUNE",
+              "duration": "01h 30m"
+            },
+            {
+              "name": "Spice Jet",
+              "plane": "ATR726",
+              "price": "4500",
+              "departureDate": "2022-04-26",
+              "time": "07:00",
+              "origin": "MUMBAI",
+              "arrivalDate": "2022-04-26T07:55",
+              "destination": "PUNE",
+              "duration": "01h 30m"
+            },
+            {
+              "name": "IndiGo",
+              "plane": "IND726",
+              "price": "2700",
+              "departureDate": "2022-04-26",
+              "time": "07:00",
+              "origin": "MUMBAI",
+              "arrivalDate": "2022-04-26T07:55",
+              "destination": "PUNE",
+              "duration": "01h 30m"
+            },
+            {
+              "name": "Go First",
+              "plane": "IND726",
+              "price": "2400",
+              "departureDate": "2022-04-26",
+              "time": "07:00",
+              "origin": "MUMBAI",
+              "arrivalDate": "2022-04-26T07:55",
+              "destination": "PUNE",
+              "duration": "01h 25m"
             },
           ],
         }
       ]
     }
   ]
-  // useEffect(() => {
-  //   const axios = require("axios");
-
-  //   const options = {
-  //     method: 'GET',
-  //     url: 'https://airport-info.p.rapidapi.com/airport',
-  //     headers: {
-  //       'X-RapidAPI-Key': '42a801370emsh35e4ddc575eefd1p19dbd5jsnb2c4e7cd1990',
-  //       'X-RapidAPI-Host': 'airport-info.p.rapidapi.com'
-  //     }
-  //   };
-
-  //   axios.request(options).then(function (response) {
-  //     console.log(response.data);
-  //   }).catch(function (error) {
-  //     console.error(error);
-  //   });
-
-
-  // }, []);
-
 
   var cities = [
     "MUMBAI",
@@ -121,7 +203,7 @@ const Home = () => {
               <div className='border hover:bg-blue-100 duration-300 py-4 px-4 w-full'>
                 <h2 className='text-xl font-semibold'>FROM</h2>
                 <select className='text-3xl font-bold bg-transparent' onChange={(e) => { setFromList(e.target.value); }} name="" id="">
-                <option className='text-lg' value="">Select</option>
+                  <option className='text-lg' value="">Select</option>
                   {cities.map((e) => (
                     <option className='text-lg' value={e}>{e}</option>
                   ))}
@@ -130,7 +212,7 @@ const Home = () => {
               <div className='border hover:bg-blue-100 duration-300 py-4 px-4 w-full'>
                 <h2 className='text-xl font-semibold'>TO</h2>
                 <select className='text-3xl font-bold bg-transparent' onChange={(e) => { setToList(e.target.value); }} name="" id="">
-                <option className='text-lg' value="">Select</option>
+                  <option className='text-lg' value="">Select</option>
                   {cities.map((e) => (
                     <option className='text-lg' value={e}>{e}</option>
                   ))}
@@ -162,17 +244,65 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div>
-        <div className='border'>
-          <h2 className='text-xl font-semibold'>Flight Result</h2>
+      <div className='bg-blue-100 pb-12'>
+        <div className=' mx-32 flex justify-center items-center flex-col'>
+          <h2 className='text-2xl font-semibold my-12 font-bold'>Flight Result</h2>
           {data[0].flight.map((e) => (
-            <div>
-                {e.segments.filter((filter)=>(filter.origin == FromList&& filter.destination == ToList )).map((data) => (
-                  <div>
-                  <div value="">{data.origin}</div>
-                  <div value="">{data.name}</div>
+            <div className='w-full'>
+              {!FromList || !ToList ? 
+              (e.segments.map((data) => (
+                <div className=' w-full shadow bg-white mt-4 p-4'>
+                  <div className='flex justify-between items-center'>
+                    <div value="" className='text-2xl'>
+                      <h2>{data.name}</h2>
+                      <h2 className='text-md'>{data.plane}</h2>
+                      <span className='text-xl font-semibold'>Departure</span>
+                      <span className='text-xl'>{data.departureDate}</span>
+                    </div>
+                    <div className='flex'>
+                      <div value="" className='text-3xl font-bold'>₹{data.price}</div>
+                      <div value="" className='rounded-full bg-blue-200 text-blue-500 border border-blue-500 mx-2 px-4 py-1 text-white text-xl '>View Prices</div>
+                    </div>
                   </div>
-                ))}
+                  <div className='flex justify-center items-center'>
+                    <div value="" className='font-semibold'>{data.origin}</div>
+                    <div className='text-green-400 flex flex-col justify-center items-center'>
+                      <div>{data.duration}</div>
+                      <hr className='text-blue-400 w-96' />
+                      <div className=''>Non Stop</div>
+                    </div>
+                    <div value="" className='font-semibold'>{data.destination}</div>
+                  </div>
+                </div>
+              )))
+              :
+              ""
+              }
+              {e.segments.filter((filter) => (filter.origin === FromList && filter.destination === ToList)).map((data) => (
+                <div className=' w-full shadow bg-white mt-4 p-4'>
+                  <div className='flex justify-between items-center'>
+                    <div value="" className='text-2xl'>
+                      <h2>{data.name}</h2>
+                      <h2 className='text-md'>{data.plane}</h2>
+                      <span className='text-xl font-semibold'>Departure</span>
+                      <span className='text-xl'>{data.departureDate}</span>
+                    </div>
+                    <div className='flex'>
+                      <div value="" className='text-3xl font-bold'>₹{data.price}</div>
+                      <div value="" className='rounded-full bg-blue-200 text-blue-500 border border-blue-500 mx-2 px-4 py-1 text-white text-xl '>View Prices</div>
+                    </div>
+                  </div>
+                  <div className='flex justify-center items-center'>
+                    <div value="" className='font-semibold'>{data.origin}</div>
+                    <div className='text-green-400 flex flex-col justify-center items-center'>
+                      <div>{data.duration}</div>
+                      <hr className='text-blue-400 w-96' />
+                      <div className=''>Non Stop</div>
+                    </div>
+                    <div value="" className='font-semibold'>{data.destination}</div>
+                  </div>
+                </div>
+              ))}
             </div>
           ))}
         </div>
@@ -183,18 +313,23 @@ const Home = () => {
 
 export default Home
 
+  // useEffect(() => {
+  //   const axios = require("axios");
 
-// <div className='border'>
-//             <h2 className='text-xl font-semibold'>Available Flights</h2>
-//             {data[0].flight.map((e) => (
-//               <div>
+  //   const options = {
+  //     method: 'GET',
+  //     url: 'https://airport-info.p.rapidapi.com/airport',
+  //     headers: {
+  //       'X-RapidAPI-Key': '42a801370emsh35e4ddc575eefd1p19dbd5jsnb2c4e7cd1990',
+  //       'X-RapidAPI-Host': 'airport-info.p.rapidapi.com'
+  //     }
+  //   };
 
-//                 <select name="" id="" className='text-lg'>
-//                   <option value="">Select</option>
-//                   {e.segments.map((data) => (
-//                     <option value="">{data.name}</option>
-//                   ))}
-//                 </select>
-//               </div>
-//             ))}
-//           </div>
+  //   axios.request(options).then(function (response) {
+  //     console.log(response.data);
+  //   }).catch(function (error) {
+  //     console.error(error);
+  //   });
+
+
+  // }, []);
